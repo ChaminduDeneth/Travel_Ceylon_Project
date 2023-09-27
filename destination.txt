@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tourism Destinations</title>
+    <link rel="stylesheet" href="destination.css">
+  </head>
+  <body>
+    
+    <div class="maindestination">
+       <img src = "main.jpg">
+    </div>
+    <div class="destination">
+      <a href="galle.html"><img src="main1.jpg"></a>
+      <h2>Galle</h2>
+      <p>Galle, located on the southwestern coast of Sri Lanka. The Galle Fort, a UNESCO World Heritage Site, is a must-visit attraction 
+         that boasts of colonial-era buildings, museums, and galleries. Other popular tourist destinations in Galle include the beautiful Unawatuna Beach and the lush green Rumassala Hill.</p>
+    </div>
+    <div class="destination">
+      <a href="kandy.html"><img src="main2.jpg"></a>
+      <h2>Kandy</h2>
+      <p>Kandy, a picturesque city located in the central highlands of Sri Lanka, is famous for its cultural significance and natural beauty. 
+         The Sacred Temple of the Tooth Relic, the Royal Botanical Gardens, and the scenic Kandy Lake are some of the popular tourist destinations that attract visitors from around the world.</p>
+    </div>
+    <div class="destination">
+      <a href="colombo.html"><img src="main3.jpg"></a>
+      <h2>Colombo</h2>
+      <p>Colombo, the vibrant capital of Sri Lanka, is a melting pot of diverse cultures and a hub for tourism. The city boasts of many popular tourist attractions, including the ancient Gangaramaya Temple,
+           the picturesque Galle Face Green, and the bustling Pettah Market, offering an unforgettable experience for visitors.</p> 
+    </div>
+    <div class="destination">
+      <a href="jaffna.html"><img src="main4.jpg"></a>
+      <h2>Jaffna</h2>
+      <p>Jaffna, a city located in the northern region of Sri Lanka, is a cultural and historical hub. Tourists can explore the Jaffna Fort, 
+          the Nallur Kandaswamy Kovil, and the Jaffna Public Library, which showcases the city's rich heritage. The beautiful Casuarina Beach is also a popular destination for tourists.</p>
+    </div>
+    <div class="destination">
+      <a href="hambanthota.html"><img src="main5.jpg"></a>
+      <h2>Hambanthota</h2>
+      <p>Hambantota, located in the southern region of Sri Lanka, is a destination that offers a mix of natural beauty and cultural attractions. 
+         Visitors can explore the Yala National Park, the ancient Mulkirigala Rock Temple, and the Hambantota Salt Pans, which showcase the city's unique features. The picturesque beaches of Hambantota are also a popular destination for tourists.</p>
+    </div>
+    <div class="destination">
+      <a href="anuradhapura.html"><img src="main6.jpg"></a>
+      <h2>Anuradhapura</h2>
+      <p>Anuradhapura, located in the North Central Province of Sri Lanka, is an ancient city that showcases the country's rich cultural and religious heritage.
+          Tourists can explore the Sacred City, a UNESCO World Heritage Site, which includes the famous Sri Maha Bodhi Tree and numerous ancient temples, stupas, and monuments. The city also offers a serene environment with beautiful lakes and parks.</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;}
+
+/* This is all pages header */
+header{
+	height:150px;
+	background-color:rgba(3, 9, 11, 0.977);
+	background-image: url("gifimage.gif");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	color:white;
+	display:flex;
+	justify-content:center;
+	position:relative;
+	font-family:"Calibri", sans-serif;
+	letter-spacing:8px;
+	font-size:25px;
+	padding:20px 0;
+
+}
+
+.header-image{
+	position:absolute;
+	width:150px;}
+.header-image-left{left:0;}
+.header-image-right{right:0;}
+
+
+/* This Home, Service, About, Review pages navigator bar */
+.section1{
+	height:25px;
+	width:100%;
+	background-color:green;
+	display:flex;
+	justify-content:flex-end;
+	font-size:80%;
+	padding-top:5px;
+	animation: mmove 5s infinite;
+	background-image: url("gifimage.gif");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	padding-bottom:5px;
+	padding-right:5px;}
+	
+.section1 a{
+	text-decoration:none;
+	color:white;
+	margin-left:30px;}
+
+.section1 a:hover{background-color:rgb(99, 13, 8);
+   height: 25px;
+   padding-top: 6px;
+   margin-top: -5px;
+}
+
+@keyframes mmove {
+    from {background-color: rgba(7, 1, 1, 0.922);}
+    to {background-color: rgba(214, 109, 188, 0.926);}
+    
+  }

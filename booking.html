@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hotel Room Booking Form</title>
+	<link rel="stylesheet" type="text/css" href="header.css">
+	<link rel="stylesheet" type="text/css" href="footer.css">
+	<link rel="stylesheet" type="text/css" href="booking.css">
+	<script>
+	function updateHotelInfo() {
+		// Get the selected hotel number
+		var hotelNumber = document.getElementById("hotel-number").value;
+	
+		// Hotel information
+		var hotelData = {
+			"1": {"name": "Colombo Hotel 01", "roomType": "Single", "airCondition":true, "price":"100"},
+			"2": {"name": "Colombo Hotel 01", "roomType": "Double", "airCondition":true, "price":"150"},
+			"3": {"name": "Colombo Hotel 02", "roomType": "Single", "airCondition":true, "price":"80"},
+			"4": {"name": "Colombo Hotel 02", "roomType": "Double", "airCondition":true, "price":"120"},
+			"5": {"name": "Colombo Hotel 03", "roomType": "Single", "airCondition":true, "price":"150"},
+			"6": {"name": "Galle Hotel 01", "roomType": "Single", "airCondition":true, "price":"100"},
+			"7": {"name": "Galle Hotel 01", "roomType": "Double", "airCondition":true, "price":"150"},
+			"8": {"name": "Galle Hotel 01", "roomType": "Single", "airCondition":true, "price":"150"},
+			"9": {"name": "Galle Hotel 01", "roomType": "Single", "airCondition":true, "price":"150"},
+			"10": {"name": "Galle Hotel 01", "roomType": "Double", "airCondition":true, "price":"200"},	
+			"11": {"name": "Kalutara Hotel 01", "roomType": "single", "airCondition":true, "price":"100"},
+			"12": {"name": "Kalutara Hotel 01", "roomType": "Single", "airCondition":true, "price":"150"},
+			"13": {"name": "Kalutara Hotel 01", "roomType": "Double", "airCondition":true, "price":"200"},
+			"14": {"name": "Kalutara Hotel 01", "roomType": "Double", "airCondition":true, "price":"250"},
+			"15": {"name": "Kalutara Hotel 01", "roomType": "Double", "airCondition":true, "price":"200"},	
+			"16": {"name": "Kandy Hotel 01", "roomType": "Single", "airCondition":true, "price":"100"},
+			"17": {"name": "Kandy Hotel 01", "roomType": "Single", "airCondition":true, "price":"150"},
+			"18": {"name": "Kandy Hotel 01", "roomType": "Single", "airCondition":true, "price":"120"},
+			"19": {"name": "Kandy Hotel 01", "roomType": "Double", "airCondition":true, "price":"200"},
+			"20": {"name": "Kandy Hotel 01", "roomType": "Double", "airCondition":true, "price":"250"},
+		};
+		
+		var hotelInfo = hotelData[hotelNumber];
+
+		// Update the hotel name and room type and price options
+		document.getElementById("hotel-name").value = hotelInfo.name;
+		document.getElementById("room-type").value = hotelInfo.roomType;
+		document.getElementById("price").value = hotelInfo.price;
+
+		// Update the air conditioning option
+		if (hotelInfo.airCondition) {
+			document.getElementById("air-conditioning-yes").checked = true;
+		} else {
+			document.getElementById("air-conditioning-no").checked = true;
+		}
+	}
+	
+	function calculateTotal() {
+	// Get the check-in and check-out dates
+	var checkInDate = new Date(document.getElementById("check-in-date").value);
+	var checkOutDate = new Date(document.getElementById("check-out-date").value);
+
+	// Calculate the number of days
+	var timeDiff = Math.abs(checkOutDate.getTime() - checkInDate.getTime());
+	var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+
+	// Get the price
+	var price = document.getElementById("price").value;
+
+	// Calculate the total amount
+	var total = price * diffDays;
+
+	// Set the total amount field
+	document.getElementById("total-amount").value = total;
+	}
+	
+	
+	function validateForm() {
+    const idNumberInput = document.getElementById("id-number");
+    const checkInDateInput = document.getElementById("check-in-date");
+
+    // Check if ID number is 10 digits
+    if (idNumberInput.value.length !== 10) {
+        alert("ID number must be 10 digits long.");
+        return false;
+    }
+
+    // Check if check-in date is not before today's date
+    const today = new Date();
+    const checkInDate = new Date(checkInDateInput.value);
+    if (checkInDate < today) {
+        alert("Check-in date must be today or a future date.");
+        return false;
+    }
+
+    // If validation passes, return true to submit form
+    return true;
+}
+	</script>
+</head>
+
+<body>
+	<!-- This is Header Section -->
+	<!-- Don't change this section -->
+	<header style="background-color:#4CAF50;">
+		<img src="travel.png" alt="Corner Image" class="header-image header-image-left">
+		<h1 style="font-size:90px;font-family:serif;padding:10px 0;">TRAVEL CEYLON</h1>
+	</header>
+	
+
+	<!-- This is Navigation Section -->
+	<!-- Don't change this section -->
+    <div class="section1">
+		<a href="Home.html">HOME</a>
+		<a href="INTERACTIVEMAP.html">INTERACTIVE MAP</a>
+		<a href="destination.html">DESTINATION</a>
+		<a href="Accommodation.html">ACCOMMODATION</a>
+		<a href="tour.html">TOUR PACKAGES</a>
+		<a href="contact.php">CONTACT US</a>
+    </div>
+	
+	
+	<!-- This is booking form section -->
+	<div class="sectionBooking">
+	<h1>Hotel Room Booking Form</h1>
+	<form action="bookingConfirmation.php" method="POST" onsubmit="return validateForm()">
+		<fieldset>
+			<legend>Hotel Information</legend>
+			<label for="hotel-number">Hotel Number:</label>
+			<select id="hotel-number" name="hotel-number" onchange="updateHotelInfo()" required>
+				<option value="">--Select--</option>
+				<option value="1">01</option>
+				<option value="2">02</option>
+				<option value="3">03</option>
+				<option value="4">04</option>
+				<option value="5">05</option>
+				<option value="6">06</option>
+				<option value="7">07</option>
+				<option value="8">08</option>
+				<option value="9">09</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+				<option value="20">20</option>
+			 </select>
+
+			<label for="hotel-name">Hotel Name:</label>
+			<input type="text" id="hotel-name" name="hotel-name" readonly required>
+
+			<label for="room-type">Room Type:</label>
+			<input type="text" id="room-type" name="room-type" readonly required>
+
+			<label for="air-conditioning">Air Conditioning:</label>
+			<input type="radio" id="air-conditioning-yes" name="air-conditioning" value="yes" required>
+			<label for="air-conditioning-yes">Yes</label>
+			<input type="radio" id="air-conditioning-no" name="air-conditioning" value="no">
+			<label for="air-conditioning-no">No</label>
+			<br><br>
+			<label for="price">Price:</label>
+			<input type="number" id="price" name="price" readonly required>
+		</fieldset>
+
+		<fieldset>
+			<legend>Customer Information</legend>
+			<label for="customer-name">Name:</label>
+			<input type="text" id="customer-name" name="customer-name" required>
+
+			<label for="id-number">ID Number:</label>
+			<input type="number" id="id-number" name="id-number" required>
+
+			
+			<label for="check-in-date">Check-In Date:</label>
+			<input type="date" id="check-in-date" name="check-in-date" required onchange="calculateTotal()">
+			<br><br>
+
+			<label for="check-out-date">Check-Out Date:</label>
+			<input type="date" id="check-out-date" name="check-out-date" required onchange="calculateTotal()">
+			<br><br>
+
+			<label for="total-amount">Total Amount:</label>
+			<input type="number" id="total-amount" name="total-amount" readonly>			
+			
+			<label for="payment-method">Payment Method:</label>
+			<select id="payment-method" name="payment-method" required>
+				<option value="">--Select--</option>
+				<option value="credit-card">Credit Card</option>
+				<option value="debit-card">Debit Card</option>
+				<option value="cash">Cash</option>
+			</select>
+		</fieldset>
+
+		<input type="submit" value="Submit">
+	</form>
+	</div>
+	
+		
+	<!-- This is Footer Section -->
+	<!-- Don't change this section -->
+    <div class="section3" style="background-color:green;">
+	<table>
+	<tr>
+		<td>
+		<img class="imgCol1" src="travelceylon.png" alt="Your Image">
+		<p>Travel Ceylon.....Travel Ceylon.....Travel Ceylon.....Travel Ceylon.....Travel Ceylon.....Travel Ceylon.....Travel Ceylon.....Travel Ceylon.....Travel Ceylon.....</p>
+		</td>
+		<td>
+		<h3>Quick Links</h3><br>
+		<div class="centerBox">
+        <dl>
+			<dd><a href="INTERACTIVEMAP.html">Interactive Map</a></dd>
+			<dd><a href="destination.html">Destination</a></dd>
+			<dd><a href="Accommodation.html">Accommodation</a></dd>
+			<dd><a href="tour.html">Tour Packages</a></dd>
+			<dd><a href="contact.php">CONTACT US</a></dd>
+        </dl>
+		</div>
+		</td>
+		<td>
+		
+		<div class="centerBox2">
+		<h3 style="margin-left:50px;">Information</h3>
+		<table>
+			<tr>
+				<td style="width:4%;"><div class="icon1"></div></td>
+				<td style="text-align:left;font-size:14px;vertical-align:middle;">
+				Address of Travel Ceylon</td>
+			</tr>
+			<tr>
+				<td><div class="icon2"></div></td>
+				<td style="text-align:left;font-size:14px;vertical-align:middle;">
+				Telephone: +94 332220478<br>
+				Mail: info@travelceylon.com</td>
+			</tr>
+			<tr>
+				<td><div class="icon3"></div></td>
+				<td style="text-align:left;font-size:14px;vertical-align:middle;">
+				info@travelceylon.com</td>
+			</tr>
+		</table>
+		</div>
+		</td>
+    </tr>
+	</table>
+	</div>
+	
+
+	<!-- This is Privacy Section -->
+	<!-- Don't change this section -->
+    <div class="section4" style="background-color:#4CAF50;">
+		Ⓒ 2023 Travel Ceylon. Designed By Team Group12<br><br>
+		Privacy Policy | Terms & Conditions
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+img.srilanka{
+
+    margin-left: 150px;
+    
+    
+}
+
+.mapdivi{
+
+   
+    
+    background-color: #3913ac;
+ /* animation: mymove 5s infinite;*/
+
+
+    
+
+    border: 5px solid black;
+    padding: 35px;
+    background-clip: padding-box;
+}
+@keyframes mymove {
+    from {background-color: rgb(196, 60, 60);}
+    to {background-color: rgb(62, 62, 143);}
+    
+  
+}
+

@@ -1,0 +1,280 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.tourSection{
+	height:auto;
+    background:rgba(0, 0, 0, 0.74)url(back.jpg);
+	background-size: cover;
+    background-blend-mode: darken;
+	background-position:center;
+    height: 140vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container
+{
+    padding-top: 3%;
+    margin: 60px;
+}
+
+
+.content
+{
+    background: none;
+    width: 80%;
+    padding: 0px;
+    margin: 5px auto;
+}
+
+.hover-grow {
+	font-size: 4em;
+	transition: font-size 0.4s ease-in-out;
+	color: #D1D05D;
+    font-size: 75px;
+    text-align: center;
+}
+
+.hover-grow:hover {
+  font-size: 6em;
+}
+
+
+h1
+{
+    color: #D1D05D;
+    font-size: 75px;
+    text-align: center;
+}
+
+p:hover h1 {
+  font-size: 2em;
+}
+
+
+p
+{
+    color: white;
+    font-size: 45px;
+    
+    text-align: center;
+}
+
+
+
+.card {
+    position: relative;
+    width: 305px;
+    height: 290px;
+    margin: 35px;
+	background: transparent;
+    display: inline-block;
+    max-width: 450px;
+	padding-top: 50px;
+}
+
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+	background: gray;
+	flex: 1;
+}
+
+.card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+	background: gray;
+	flex: 1;
+	
+}
+
+.card .front h3 {
+	font-size: 29px;
+	font-weight: 200;
+    position: absolute;
+	padding-top: 100px;
+    bottom: 0;
+    width: 100%;
+    height: 290px;
+    line-height: 40px;
+    color: #fff;
+    background: rgba(0, 130, 0, 0.6);
+    text-align: center;
+	
+}
+
+.card .front h3 span{
+	font-weight: 900;
+}
+
+
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(0, 100, 54);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .back .link {
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+
+.card .back .link a {
+    color: #f3f3f3;
+}
+
+.card .back p {
+    font-size: 15px;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+
+
+.main
+{
+    width: 100%;
+    height: 20vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 3%;
+    box-sizing: border-box;
+}
+
+.navbar
+{
+    height: 12%;
+    display: flex;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+.logo
+{
+    width: 150px;
+    cursor: pointer;
+    margin-top: 5%;
+	margin-left:96%;
+	
+}
+
+footer
+{
+    position: absolute;
+    bottom: -500;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    width: 100vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 40px;
+    color: #fff;
+}
+
+.footer-content
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3
+{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-content h6
+{
+    max-width: 500px;
+    margin: 8px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.socials
+{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socials li
+{
+    margin: 0 8px;
+}
+
+.socials a
+{
+    text-decoration: none;
+    color: #fff;
+}
+
+.socials a i
+{
+    font-size: 1.1rem;
+    transition: color .05s ease;
+}
+
+
+
+.footer-bottom
+{
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p
+{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span
+{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}

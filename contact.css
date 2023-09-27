@@ -1,0 +1,71 @@
+body{
+	background-image:url('unawatuna.jpg');
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center;}
+
+.contactBody {
+	height:auto;
+	
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 20px;
+}
+.contactBody form{
+	width:60%;
+	margin:0 auto;
+	border:5px solid black; 
+	padding: 20px;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius:10px;}
+	
+.contactBody h1 {
+	text-align:center;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.contactBody label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.contactBody input[type="text"],
+.contactBody textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.contactBody input[type="text"]:focus,
+.contactBody textarea:focus {
+  border-color: #4CAF50;
+}
+
+.contactBody button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contactBody button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+.contactBody .error {
+  display: block;
+  margin-top: 5px;
+  color: red;
+  font-size: 14px;
+}
+

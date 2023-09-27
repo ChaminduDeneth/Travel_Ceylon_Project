@@ -1,0 +1,52 @@
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+.destination {
+  display: inline-block;
+  width: 30%;
+  margin: 20px;
+  vertical-align: top;
+  text-align:center;
+}
+
+.maindestination {
+  display:block;
+  margin: 0px;
+  margin-top:20px;
+}
+
+.maindestination img {
+  width: 100%;
+  height: auto;
+}
+
+
+.maindestination img:hover  {
+  
+}
+
+
+
+.destination img {
+  width: 100%;
+  height: auto;
+}
+
+.destination img:hover {
+  opacity: 0.7;
+}
+
+.destination h2 {
+  margin: 10px 0;
+}
+
+.destination p {
+  font-size: 14px;
+  line-height: 1.4;
+}

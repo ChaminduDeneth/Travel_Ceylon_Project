@@ -1,0 +1,42 @@
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;}
+
+/* This is all pages header */
+header{
+	height:auto;
+	background-color:lightblue;
+	color:white;
+	display:flex;
+	justify-content:center;
+	position:relative;
+	font-family:"Calibri", sans-serif;
+	letter-spacing:8px;
+	font-size:25px;}
+
+.header-image{
+	position:absolute;
+	width:120px;}
+.header-image-left{left:0;}
+.header-image-right{right:0;}
+
+
+/* This Home, Service, About, Review pages navigator bar */
+.section1{
+	height:auto;
+	width:100%;
+	background-color:green;
+	display:flex;
+	justify-content:flex-end;
+	font-size:80%;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-right:5px;}
+	
+.section1 a{
+	text-decoration:none;
+	color:white;
+	margin-left:30px;}
+
+.section1 a:hover{background-color:lightblue;}
